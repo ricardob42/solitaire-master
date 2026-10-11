@@ -1,0 +1,111 @@
+/* Shared typography and layout for the dialogs (Stats, Settings, Victory, Import). */
+.sheet-emblem {
+  display: block;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 14px;
+  padding: 13px;
+  border-radius: 17px;
+  color: var(--ink);
+  background: linear-gradient(150deg, var(--felt-hi), var(--felt-lo));
+  border: 1px solid var(--brass-line);
+  box-shadow: 0 0 0 4px oklch(0 0 0 / 0.18), 0 10px 22px -8px oklch(0 0 0 / 0.7);
+}
+.sheet-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.9rem, 6vw, 2.35rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--brass-bright);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+}
+.sheet-sub {
+  margin: 8px 0 20px;
+  text-align: center;
+  color: var(--ink-dim);
+  font-size: 0.95rem;
+}
+.sheet-h {
+  margin: 0 0 10px;
+  font: 700 10.5px/1 var(--font-ui);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+.sheet-section {
+  margin-top: 22px;
+}
+.sheet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+.panel {
+  padding: 14px;
+  border-radius: 15px;
+  border: 1px solid var(--line);
+  background: oklch(0 0 0 / 0.16);
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.row p {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.choice-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  gap: 8px;
+}
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 6px;
+  border-radius: 13px;
+  border: 1px solid var(--line);
+  background: oklch(1 0 0 / 0.03);
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: border-color 0.18s, background 0.18s, transform 0.18s var(--ease-spring);
+}
+.choice small {
+  font-weight: 500;
+  font-size: 0.74rem;
+  color: var(--ink-faint);
+}
+.choice:hover {
+  background: oklch(1 0 0 / 0.07);
+}
+.choice:active {
+  transform: scale(0.97);
+}
+.choice[aria-pressed='true'] {
+  border-color: var(--brass);
+  background: oklch(0.82 0.125 85 / 0.12);
+  color: var(--brass-bright);
+  box-shadow: 0 0 0 1px var(--brass-line);
+}
+.choice-row.cols-5 {
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+.choice-row.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.choice-row.cols-5 .choice {
+  padding: 8px 2px;
+  font-size: 0.78rem;
+}
