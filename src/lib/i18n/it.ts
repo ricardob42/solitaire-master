@@ -175,7 +175,8 @@ const it: Record<keyof typeof en, string> = {
   "set.awakeDesc": "Impedisce allo schermo di spegnersi durante la partita.",
   "stats.daily28": "Sfide giornaliere · ultimi 28 giorni",
   "toast.noTarget": "Questa carta non ha dove andare.",
-  "toast.tip": "Suggerimento: tocca due volte una carta per spostarla sulla pila migliore."
+  "toast.tip": "Suggerimento: tocca due volte una carta per spostarla sulla pila migliore.",
+  "btn.langToggle": "Cambia lingua in {lang}"
 };
 
 export default it;

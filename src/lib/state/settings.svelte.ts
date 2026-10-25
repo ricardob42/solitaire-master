@@ -40,15 +40,13 @@ function pick<T extends string>(list: readonly T[], value: string | null, fallba
   return (list as readonly string[]).includes(value ?? '') ? (value as T) : fallback;
 }
 
-function detectLang(): Lang {
-  const stored = store.get(K.lang);
-  if (stored) return pick(LANGS, stored, 'en');
-  const nav = (navigator.language || 'en').slice(0, 2).toLowerCase();
-  return pick(LANGS, nav, 'en');
+/** Spanish unless the player has chosen another language. */
+function initialLang(): Lang {
+  return pick(LANGS, store.get(K.lang), 'es');
 }
 
 class Settings {
-  lang = $state<Lang>(detectLang());
+  lang = $state<Lang>(initialLang());
   theme = $state<Theme>(pick(THEMES, store.get(K.theme), 'emerald'));
   back = $state<Back>(pick(BACKS, store.get(K.back), 'classic'));
   draw = $state<1 | 3>(store.get(K.draw) === '3' ? 3 : 1);
@@ -62,6 +60,8 @@ class Settings {
   }
 
   setLang(v: Lang) { this.lang = v; store.set(K.lang, v); }
+  /** Header shortcut: Spanish <-> English (any other language jumps to Spanish). */
+  toggleLang() { this.setLang(this.lang === 'es' ? 'en' : 'es'); }
   setTheme(v: Theme) { this.theme = v; store.set(K.theme, v); }
   setBack(v: Back) { this.back = v; store.set(K.back, v); }
   setDraw(v: 1 | 3) { this.draw = v; store.set(K.draw, String(v)); }

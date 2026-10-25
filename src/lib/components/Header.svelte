@@ -1,12 +1,13 @@
 <script lang="ts">
   import { game } from '../state/game.svelte';
-  import { settings } from '../state/settings.svelte';
+  import { settings, LANG_NAMES } from '../state/settings.svelte';
   import { stats } from '../state/stats.svelte';
   import { ui } from '../state/ui.svelte';
   import { t } from '../i18n/index.svelte';
   import { fmtTime } from './format';
   import Icon from './Icon.svelte';
   import Suit from './Suit.svelte';
+  const nextLang = $derived(settings.lang === 'es' ? 'en' : 'es');
 </script>
 
 <header class="top">
@@ -31,6 +32,12 @@
   </div>
 
   <div class="tools">
+    <button
+      class="btn icon lang"
+      onclick={() => settings.toggleLang()}
+      title={t('btn.langToggle', { lang: LANG_NAMES[nextLang] })}
+      aria-label={t('btn.langToggle', { lang: LANG_NAMES[nextLang] })}
+    >{nextLang.toUpperCase()}</button>
     <button class="btn icon" onclick={() => ui.open('stats')} title={t('title.statsBtn')} aria-label={t('aria.statsBtn')}>
       <Icon name="stats" />
     </button>
@@ -175,6 +182,11 @@
     100% { transform: scale(1); }
   }
 
+  .btn.lang {
+    font: 700 12px/1 var(--font-ui);
+    letter-spacing: 0.06em;
+  }
+
   .tools,
   .actions {
     display: flex;
@@ -215,7 +227,7 @@
     50% { box-shadow: 0 0 0 7px oklch(0.82 0.125 85 / 0); }
   }
 
-  @media (max-width: 1180px) {
+  @media (max-width: 1360px) {
     .lbl { display: none; }
     .actions .btn { width: 38px; padding: 0; }
   }

@@ -175,7 +175,8 @@ const fr: Record<keyof typeof en, string> = {
   "set.awakeDesc": "Empêche l’écran de s’éteindre pendant la partie.",
   "stats.daily28": "Défis quotidiens · 28 derniers jours",
   "toast.noTarget": "Cette carte ne peut aller nulle part.",
-  "toast.tip": "Astuce : touchez deux fois une carte pour l’envoyer sur sa meilleure pile."
+  "toast.tip": "Astuce : touchez deux fois une carte pour l’envoyer sur sa meilleure pile.",
+  "btn.langToggle": "Changer la langue en {lang}"
 };
 
 export default fr;

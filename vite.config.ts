@@ -28,8 +28,8 @@ export default defineConfig({
         name: 'Solitaire Master',
         short_name: 'Solitaire',
         description:
-          'Klondike Solitaire with a daily challenge, hints, unlimited undo, statistics and offline play.',
-        lang: 'en',
+          'Solitario Klondike con desafío diario, pistas, deshacer ilimitado, estadísticas y juego sin conexión.',
+        lang: 'es',
         start_url: '/',
         scope: '/',
         display: 'standalone',
@@ -45,14 +45,14 @@ export default defineConfig({
         ],
         shortcuts: [
           {
-            name: 'New game',
-            short_name: 'New',
+            name: 'Nueva partida',
+            short_name: 'Nueva',
             url: '/?action=new',
             icons: [{ src: '/icon-192.png', sizes: '192x192' }]
           },
           {
-            name: 'Daily challenge',
-            short_name: 'Daily',
+            name: 'Desafío diario',
+            short_name: 'Diario',
             url: '/?action=daily',
             icons: [{ src: '/icon-192.png', sizes: '192x192' }]
           }

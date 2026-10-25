@@ -175,7 +175,8 @@ const de: Record<keyof typeof en, string> = {
   "set.awakeDesc": "Verhindert, dass der Bildschirm während des Spiels dunkel wird.",
   "stats.daily28": "Tägliche Herausforderungen · letzte 28 Tage",
   "toast.noTarget": "Diese Karte kann nirgendwohin.",
-  "toast.tip": "Tipp: Doppeltippe eine Karte, um sie auf den besten Stapel zu legen."
+  "toast.tip": "Tipp: Doppeltippe eine Karte, um sie auf den besten Stapel zu legen.",
+  "btn.langToggle": "Sprache wechseln zu {lang}"
 };
 
 export default de;
