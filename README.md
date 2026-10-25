@@ -2,7 +2,7 @@
 
 Klondike Solitaire as an installable, offline-capable PWA. Svelte 5 · Vite · TypeScript.
 
-Features: daily challenge with streaks, hints that explain themselves, unlimited undo/redo, a move timeline you can scrub, statistics, five felts, five card backs, six languages (EN, ES, PT, FR, DE, IT), shareable games, keyboard play, synthesised sound.
+Features: daily challenge with streaks, hints that explain themselves, unlimited undo/redo, a move timeline you can scrub, statistics, five felts, five card backs, six languages (Spanish by default, plus EN, PT, FR, DE, IT) with a one-tap ES/EN toggle in the header, shareable games, keyboard play, synthesised sound.
 
 ## Quick start
 

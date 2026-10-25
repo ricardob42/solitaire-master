@@ -174,7 +174,8 @@ const en = {
   "set.awakeDesc": "Stops the screen from dimming while you play.",
   "stats.daily28": "Daily challenges · last 28 days",
   "toast.noTarget": "That card has nowhere to go.",
-  "toast.tip": "Tip: double-tap a card to send it to its best pile."
+  "toast.tip": "Tip: double-tap a card to send it to its best pile.",
+  "btn.langToggle": "Switch language to {lang}"
 } as const;
 
 export default en;
